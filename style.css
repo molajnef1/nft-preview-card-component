@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+/*Primary*/
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+/*NEUTRAL*/
+--Very-dark-blue: hsl(217, 54%, 11%);
+--less-dark-blue: hsl(216, 50%, 16%);
+--lesser-dark-blue: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+font-size: 1,125em;
+font-family: 'Outfit';
+box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--Very-dark-blue);
+    
+}
+
+.container{
+width: 15rem;
+height: 30rem;
+background-color: var(--less-dark-blue);
+color: var(--Soft-blue);
+padding: 1rem;
+border-radius: 10px;
+font-size: inherit;
+font-family: inherit;
+box-sizing: inherit;
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.container h3{
+    color: var(--White);
+    font-weight: 600;
+}
+.container h3:hover{
+cursor: pointer;
+color: var(--Cyan);
+}
+.container > p{
+    font-weight: 300;
+}
+.active-state{
+    background-color: hsla(178, 100%, 50%, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    margin-bottom: 4px;
+}
+.active-state{
+    visibility: none;
+    opacity: 0;
+    transition: opacity .7s;
+}
+.equilibrium-container{
+    position: relative;
+}
+.equilibrium-container:hover .active-state{
+    cursor: pointer;
+    visibility: visibile;
+    opacity: 1;
+}
+
+.view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--lesser-dark-blue);
+    background: none;
+}
+
+
+.equilibrium{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price-info{
+    display: flex;
+    justify-content: space-between;
+}
+p .icon{
+    width: 10px;
+    height: 15px;
+    margin-right: 5px;
+}
+.special{
+    color: var(--Cyan);
+
+}
+.clock{
+    margin-bottom: -2px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid;
+    margin-top: 10px;
+}
+.profile{
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.info a{
+    color: var(--White);
+    text-decoration: none;
+}
+.info a:hover{
+    color: var(--Cyan);
+}
